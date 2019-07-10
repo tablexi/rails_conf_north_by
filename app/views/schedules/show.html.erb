@@ -1,10 +1,10 @@
 <section>
   <section>
     <div class="columns is-gapless">
-      <% @schedule.schedule_days.each do |schedule_day| %>
+      <% @schedule.each do |schedule_day, concerts| %>
         <div class="column has-text-centered"
-            data-associated="day-body:<%= schedule_day.day.by_example("2006-01-02") %>">
-          <%= schedule_day.day.by_example("Jan 2") %>
+            data-associated="day-body:<%= schedule_day.by_example("2006-01-02") %>">
+          <%= schedule_day.by_example("Jan 2") %>
         </div>
       <% end %>
 
@@ -25,17 +25,17 @@
   <br/>
 
   <section>
-    <% @schedule.schedule_days.each do |schedule_day| %>
+    <% @schedule.each do |schedule_day, concerts| %>
       <section class="day-body"
-              id="day-body:<%= schedule_day.day.by_example("2006-01-02") %>">
+              id="day-body:<%= schedule_day.by_example("2006-01-02") %>">
         <h2 class="title is-3">
-          <%= schedule_day.day.by_example("Monday, January 2, 2006") %>
+          <%= schedule_day.by_example("Monday, January 2, 2006") %>
           <div class="button is-primary">
             <span>Hide</span>
           </div>
         </h2>
         <section>
-          <% schedule_day.concerts.sort_by(&:start_time).each do |concert| %>
+          <% concerts.sort_by(&:start_time).each do |concert| %>
             <article class="concert">
               <div class="columns">
                 <div class="column is-size-4 is-one-fifth">
