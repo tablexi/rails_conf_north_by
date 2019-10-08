@@ -5,7 +5,7 @@ gem "awesome_print"
 gem "bootsnap", require: false
 gem "date_by_example"
 gem "devise"
-gem "jbuilder"
+gem "jbuilder", github: "rails/jbuilder", branch: "master"
 gem "puma"
 gem "rails", "~> 6.0.0.rc1"
 gem "sqlite3"
@@ -19,7 +19,7 @@ group :development, :test do
   gem "faker"
   gem "pry-rails"
   gem "pry-rescue"
-  gem "rspec-rails"
+  gem "rspec-rails", "~> 4.0.0.beta2"
   gem "standard"
   gem "slim_lint"
 end

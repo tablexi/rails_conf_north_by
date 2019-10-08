@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/rails/jbuilder.git
+  revision: fd65c7140d3142270d5723c6294c4c6cf035cadf
+  branch: master
+  specs:
+    jbuilder (2.9.1)
+      activesupport (>= 5.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -125,9 +133,6 @@ GEM
       concurrent-ruby (~> 1.0)
     interception (0.5)
     jaro_winkler (1.5.2)
-    jbuilder (2.8.0)
-      activesupport (>= 4.2.0)
-      multi_json (>= 1.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     listen (3.1.5)
@@ -147,7 +152,6 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     msgpack (1.2.10)
-    multi_json (1.13.1)
     nio4r (2.3.1)
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
@@ -206,23 +210,23 @@ GEM
     responders (2.4.1)
       actionpack (>= 4.2.0, < 6.0)
       railties (>= 4.2.0, < 6.0)
-    rspec-core (3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-expectations (3.8.3)
+    rspec-core (3.9.0)
+      rspec-support (~> 3.9.0)
+    rspec-expectations (3.9.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-mocks (3.8.0)
+      rspec-support (~> 3.9.0)
+    rspec-mocks (3.9.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.8.0)
-    rspec-rails (3.8.2)
-      actionpack (>= 3.0)
-      activesupport (>= 3.0)
-      railties (>= 3.0)
-      rspec-core (~> 3.8.0)
-      rspec-expectations (~> 3.8.0)
-      rspec-mocks (~> 3.8.0)
-      rspec-support (~> 3.8.0)
-    rspec-support (3.8.0)
+      rspec-support (~> 3.9.0)
+    rspec-rails (4.0.0.beta2)
+      actionpack (>= 4.2)
+      activesupport (>= 4.2)
+      railties (>= 4.2)
+      rspec-core (~> 3.8)
+      rspec-expectations (~> 3.8)
+      rspec-mocks (~> 3.8)
+      rspec-support (~> 3.8)
+    rspec-support (3.9.0)
     rubocop (0.67.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -309,13 +313,13 @@ DEPENDENCIES
   factory_bot_rails
   faker
   htmlbeautifier
-  jbuilder
+  jbuilder!
   listen
   pry-rails
   pry-rescue
   puma
   rails (~> 6.0.0.rc1)
-  rspec-rails
+  rspec-rails (~> 4.0.0.beta2)
   selenium-webdriver
   slim_lint
   spring
